@@ -21,3 +21,21 @@ java -jar target/gs-soap-service-0.1.0.jar
       </gs:getCountryRequest>
    </soapenv:Body>
 </soapenv:Envelope>
+
+# Deploy on heroku
+- Install the Heroku CLI
+- Go to Terminal
+
+``heroku login``
+- You need to login in your account
+- Add heroku remote to your git repository
+
+```heroku git:remote -a name-of-your-project-on-heroku```
+
+- You need to define type of app 
+
+``heroku buildpacks:set heroku/java``
+
+- deploy app
+
+``git push heroku master``
